@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+panda3d
+folium
+opencv-python
+numpy
+pandas
+ultralytics
