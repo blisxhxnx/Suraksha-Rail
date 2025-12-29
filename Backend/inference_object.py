@@ -13,7 +13,8 @@ from ultralytics import YOLO  # type: ignore
 
 # ---------------- CONFIG ----------------
 # Change the MODEL_PATH to your local yolov8 weights path
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "Model", "yolov8m-worldv2.pt")
+# MODEL_PATH = r"C:\Users\SAPTARSHI MONDAL\SnakeGame\Model\yolov8m-worldv2.pt"
+MODEL_PATH = Path(__file__).parent / "Model" / "yolov8m-worldv2.pt"
 
 # performance
 FRAME_SKIP = 2
@@ -128,7 +129,7 @@ def draw_hud(frame, speed_kmph, overall_decision, overall_risk, thumbnails):
     alpha = 0.45
     cv2.addWeighted(overlay, alpha, frame, 1 - alpha, 0, frame)
 
-    cv2.putText(frame, "TrackGuard HUD", (12, 22), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+    cv2.putText(frame, "Suraksha Rail HUD", (12, 22), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
     sp_x, sp_y = 12, 48
     cv2.putText(frame, f"Speed: {int(speed_kmph)} km/h", (sp_x, sp_y), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (200, 200, 255), 2)
 
@@ -177,7 +178,7 @@ def draw_hud(frame, speed_kmph, overall_decision, overall_risk, thumbnails):
 
 def run_inference(input_path: str, sim_speed: float = 80.0, device: str = "cpu", out_dir: str = "outputs") -> dict:
     """
-    Run the full TrackGuard pipeline on a video file.
+    Run the full Suraksha Rail pipeline on a video file.
     Writes artifacts into the provided out_dir (session folder).
     Returns a dict with absolute paths for debugging (optional).
     """

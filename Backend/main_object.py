@@ -7,7 +7,11 @@ import shutil
 from train_fault_3dsimulation import router as train_router
 from train_obstacle_3dsimulation import router as obstacle_router
 
+import sys
+print(f"DEBUG: sys.path: {sys.path}")
 from inference_object import run_inference          # object detection
+import inference_track
+print(f"DEBUG: inference_track file: {inference_track.__file__}")
 from inference_track import run_inference_trackfault  # track fault detection
 
 app = FastAPI(title="Suraksha Rail API", version="2.0")

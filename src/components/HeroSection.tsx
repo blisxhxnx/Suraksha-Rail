@@ -7,28 +7,24 @@ const HeroSection = () => {
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-900 via-gray-900 to-black"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {/* Railway track lines */}
-          <div className="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-500/50 to-transparent animate-pulse"></div>
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-3/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-teal-500/30 to-transparent animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400/30 to-transparent animate-pulse"></div>
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-amber-400/20 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-3/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-red-400/20 to-transparent animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
         
         {/* Glowing orbs */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-green-400/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 bg-amber-400/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-red-400/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }}></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 h-screen flex flex-col justify-center items-center text-center">
         <div className="mb-8 animate-fade-in">
-          <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium tracking-wide">
-            🚀 The Future of Indian Railway Safety
-          </div>
-          <h1 className="text-6xl md:text-9xl font-black mb-6 tracking-tight">
-            <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400 bg-clip-text text-transparent">
               Suraksha Rail
             </span>
           </h1>

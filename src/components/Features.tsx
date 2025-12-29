@@ -54,19 +54,17 @@ const Features = () => {
             return (
               <div
                 key={index}
-                className="group relative bg-gray-800/40 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/10 overflow-hidden"
+                className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <div className={`relative w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border-2 transition-all duration-500 ${colorClasses[feature.color as keyof typeof colorClasses]} group-hover:scale-110 group-hover:rotate-3`}>
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border-2 transition-all duration-300 ${colorClasses[feature.color as keyof typeof colorClasses]}`}>
                   <Icon className="w-8 h-8" />
                 </div>
                 
-                <h3 className="relative text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 
-                <p className="relative text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>

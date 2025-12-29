@@ -13,7 +13,9 @@ CSV_OUT   = "alerts_track_fault.csv"
 MAP_OUT   = "track_fault_map.html"
 
 # ==== Load model once here ==== #
-MODEL = YOLO(Path(__file__).parent / "Model" / "track_fault_detection.pt")   # <-- put your trained model path here
+MODEL_PATH = Path(__file__).parent / "Model" / "track_fault_detection.pt"
+print(f"DEBUG: Loading model from {MODEL_PATH}, exists={MODEL_PATH.exists()}")
+MODEL = YOLO(str(MODEL_PATH))   # <-- put your trained model path here
 
 # ==== Risk scoring helpers ====
 def braking_distance_m(speed_kmph, reaction_time_s, decel_mps2):

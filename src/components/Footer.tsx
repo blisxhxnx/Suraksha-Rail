@@ -39,9 +39,9 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-green-400" />
-                <a href="mailto:contact@trackguard.ai" className="text-gray-300 hover:text-green-400 transition-colors">
-                   kdon27783@gmail.com
-                </a>
+                 <a href="mailto:contact@suraksharail.ai" className="text-gray-300 hover:text-green-400 transition-colors">
+                   contact@suraksharail.ai
+                 </a>
               </div>
               <div className="flex space-x-4 mt-4">
                 <a href="https://github.com/SaptarshiMondal123/fake"
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 TrackGuard. All rights reserved. Built for railway safety innovation.
+            © 2025 Suraksha Rail. All rights reserved. Built for railway safety innovation.
           </div>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</a>

@@ -107,7 +107,7 @@ const VideoUpload: React.FC<VideoUploadProps> = ({ onAnalysisComplete }) => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            See TrackGuard in <span className="text-green-400">Action</span>
+            See Suraksha Rail in <span className="text-green-400">Action</span>
           </h2>
           <p className="text-gray-300 text-xl max-w-2xl mx-auto">
             Upload a railway video to experience our AI-powered collision detection system
@@ -118,11 +118,11 @@ const VideoUpload: React.FC<VideoUploadProps> = ({ onAnalysisComplete }) => {
           {!uploadedVideo ? (
             <div
               className={`
-                relative border-2 border-dashed rounded-3xl p-16 text-center cursor-pointer
-                transition-all duration-500 transform hover:scale-[1.01]
+                relative border-2 border-dashed rounded-2xl p-12 text-center cursor-pointer
+                transition-all duration-300 transform hover:scale-[1.02]
                 ${isDragOver 
-                  ? 'border-green-400 bg-green-400/10 shadow-[0_0_30px_rgba(74,222,128,0.2)]' 
-                  : 'border-gray-700 hover:border-green-500/50 hover:bg-gray-800/80 hover:shadow-2xl hover:shadow-green-500/5'
+                  ? 'border-green-400 bg-green-400/5 shadow-lg shadow-green-400/20' 
+                  : 'border-gray-600 hover:border-green-400 hover:bg-green-400/5'
                 }
               `}
               onDragOver={handleDragOver}
@@ -130,22 +130,21 @@ const VideoUpload: React.FC<VideoUploadProps> = ({ onAnalysisComplete }) => {
               onDrop={handleDrop}
               onClick={() => fileInputRef.current?.click()}
             >
-              <div className="flex flex-col items-center space-y-8">
+              <div className="flex flex-col items-center space-y-6">
                 <div className={`
-                  p-8 rounded-full transition-all duration-500
-                  ${isDragOver ? 'bg-green-400/20 scale-110 rotate-12' : 'bg-gray-800 group-hover:bg-gray-700'}
+                  p-6 rounded-full transition-all duration-300
+                  ${isDragOver ? 'bg-green-400/20 scale-110' : 'bg-gray-800'}
                 `}>
-                  <Upload className={`w-16 h-16 ${isDragOver ? 'text-green-400' : 'text-gray-400 group-hover:text-green-400'} transition-colors duration-300`} />
+                  <Upload className={`w-12 h-12 ${isDragOver ? 'text-green-400' : 'text-gray-400'}`} />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold text-white tracking-tight">
-                    Upload Rail Video Analysis
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Upload Rail Video to See Suraksha Rail in Action
                   </h3>
-                  <p className="text-gray-400 text-lg max-w-md mx-auto">
+                  <p className="text-gray-400 mb-6">
                     Drag and drop your video here, or click to browse
                   </p>
-                  <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-green-500/25 mt-4">
-                    <Upload className="w-5 h-5 mr-2" />
+                  <div className="inline-flex px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all">
                     Choose Video File
                   </div>
                 </div>

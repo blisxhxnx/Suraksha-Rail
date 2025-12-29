@@ -1,8 +1,8 @@
 version: "2.0"
 
 services:
-  trackguard:
-    image: yourdockerhubusername/trackguard:latest
+  suraksharail:
+    image: yourdockerhubusername/suraksharail:latest
     expose:
       - port: 8501  # Streamlit dashboard
         as: 80
@@ -20,7 +20,7 @@ services:
 
 profiles:
   compute:
-    trackguard:
+    suraksharail:
       resources:
         cpu:
           units: 2
@@ -36,7 +36,7 @@ profiles:
         anyOf:
           - "akash1..."
 deployment:
-  trackguard:
+  suraksharail:
     akash:
-      profile: trackguard
+      profile: suraksharail
       count: 1

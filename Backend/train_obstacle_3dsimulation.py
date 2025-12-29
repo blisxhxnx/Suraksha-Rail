@@ -180,7 +180,20 @@ class TwoTrainSafetyDemo(ShowBase):
             os.system(f'ffmpeg -y -i {tmp_path} -vcodec libx264 -crf 28 -preset fast {VIDEO_PATH}')
             os.remove(tmp_path)
         else:
-            os.rename(tmp_path, VIDEO_PATH)
+            # fallback: write MP4 using mp4v codec (less efficient)
+            fallback_path = "output/two_train_fallback.mp4"
+            out2 = cv2.VideoWriter(fallback_path, cv2.VideoWriter_fourcc(*"mp4v"), 30, (w, h))
+            for f in self.frames:
+                out2.write(f)
+            out2.release()
+            try:
+                if os.path.exists(VIDEO_PATH):
+                    os.remove(VIDEO_PATH)
+                os.rename(fallback_path, VIDEO_PATH)
+                os.remove(tmp_path)
+            except OSError:
+                pass
+            self._log(f"🎥 Video saved (fallback encoder) to {VIDEO_PATH}")
 
 # ==== FastAPI App ====
 app = FastAPI()
